@@ -6,6 +6,6 @@ function diagonalDifference(arr) {
 		leftDiagonal += arr[i][i];
 		rightDiagonal += arr[i][j];
 	}
-	console.log(rightDiagonal - leftDiagonal)
+	return Math.abs(leftDiagonal - rightDiagonal);
 }
 diagonalDifference([[1,2,3], [4,5,6], [7,8,4]]);
