@@ -20,7 +20,6 @@ function birthdayCakeCandles(arr) {
 }
 
 function birthdayCakeCandles2(arr) {
-    // 1) store each number into object and number of the sam numbers
     let maxNum = arr.sort((a, b) => a - b)[arr.length - 1];
     let numOfCandels = 0;
     arr.forEach(num => {
@@ -31,5 +30,18 @@ function birthdayCakeCandles2(arr) {
 
 }
 
+function birthdayCakeCandles3(arr) {
+    let maxNum = Math.max.apply(null, arr);
+    let numOfCandels = 0;
+    arr.forEach(num => {
+        if(maxNum == num) numOfCandels++;
+    });
+   
+    console.log(numOfCandels);
+
+}
+
+
 birthdayCakeCandles([3,3,4,4,4,1]);
 birthdayCakeCandles2([3,3,4,4,4,1]);
+birthdayCakeCandles3([3,3,4,4,4,1]);
